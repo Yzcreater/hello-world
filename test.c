@@ -1,52 +1,58 @@
+#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+#include <string.h>
+//n的阶乘
+//int Fac2(int n) {
+//	if (n < 1) {
+//		return 1;
+//	}
+//	else {
+//		return n * Fac2(n-1);
+//		
+//	}
+//
+//
+//
+//}
+//int main() {
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d",&n);
+//	ret = Fac2(n);
+//	printf("%d\n",ret);
+//	return 0;
+//}
+//
+//斐波那契数列
+//int Fib(int n) {
+//
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return Fib(n - 1) + Fib(n - 2);
+//	
+//
+//}
+int Fib(int n) {
+	int a = 1;
+	int b = 1;
+	int c = 0;
+	while (n>2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
 
-//包含一个叫stdio.h的文件
-// standard inout output
-//main 主函数 --程序的入口--有且只有一个
 
-//int 是整型的意思 
-//main前面的int表示main函数调用返回一个整型值
-
-//int num2 = 20;//全局变量-定义在代码{}之外的变量
+}
 int main() {
-	int num = 21;
-	printf("num = %d\n",num);
-
+	int n = 0;
+	int ret = 0;
+	scanf("%d",&n);
+	ret = Fib(n);
+	printf("%d\n",ret);
 	return 0;
 }
-//int main() {
-
-
-	//int sum = 0;
-	//int num1 = 0;
-	//int num2 = 0;
-
-	
-	//输入数据--使用输入函数scanf_s
-	//scanf_s("%d%d",&num1,&num2);//& 取地址符号
-	
-	//sum = num1 + num2; 
-	//printf("sum = %d\n",sum);
-
-	//int num1 = 10;//局部变量
-	//short age = 20;//向内存申请两个字节==16bit
-
-
-	//函数-print function-printf-打印函数
-	//库函数-C语言本身提供给我们使用的函数
-	//使用别人的东西-打招呼
-	//#include
-	//printf("mother fuck");
-
-	//char ch = 'a';
-	//printf("%c\n",ch);
-	//int age = 20;
-	//printf("%d\n",age);
-	//printf("%d\n",sizeof(char));
-	//printf("%d\n",sizeof(short));
-	//printf("%d\n",sizeof(int));
-	//printf("%d\n",sizeof(long));
-	//printf("%d\n",sizeof(long long));
-	//printf("%d\n",sizeof(float));
-	//printf("%d\n",sizeof(double));
-	//return 0;
